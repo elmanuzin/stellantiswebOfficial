@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validar licença</title>
+    <link rel="stylesheet" type="text/css" href="senha.css">
+    <link rel="icon" href="stellantos.png">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="logo">
+        <a href="index.html">
+        <img class="cabecalho-imagem" src="stellantis.svg" alt="Logo stellantis">
+    </a>
+    </div>
+        <nav class="cabecalho-menu">
+          <a class="cabecalho-menu-item" href="#">Sobre</a>
+        
+        </nav>
+      </header>
+    <h1>Validar licença</h1>
+    <div class="main-content">
+       <p>Validar licença <a href="https://portal.azure.com/#home">Aqui</a><br>Obs: é necessário estar conectado na rede Stellantis / VM e acessar o portal com seu usuário Stellantis</p> 
+        <h2>
+            <br>1. No campo de busca superior insira o UserID do usuário em questão e aguarde o carregamento e clique no usuário.  <br>
+            <br>2. Na parte esquerda clique em Licenses e na tela seguinte verifique as licenças<br>
+        <br>3. Segue abaixo as licenças utilizadas pela Stellantis:<br> 
+        <br><strong>E1: Licença super limitada, uso habilitado somente para Teams, não é possível acessar o Office Web e nem o Outlook. </strong><br>
+        <br><strong>F3:Licença limitada, mailbox com apenas 2GB e uso somente via web. </strong><br>
+        <br><strong>E3: Licença completa, uso via Desktop e Web habilitado. </strong><br><br>
+        Obs: Se tiver licença E1 está errado. Será necessário abrir uma solicitação para o time de Adm User.<br><br>
+        Obs: Terceiros, estagiários, horistas e aprendizes possuem a licença mais básica e seus acessos são feitos <strong><mark>SOMENTE</mark></strong> pela web. 
+        </h2>
+      </div>
+
+      <p>
+        <input type="checkbox" id="test1"  />
+        <label for="test1">Sem problemas com licença</label>
+      </p>
+      <p>
+        <input type="checkbox" id="test2"  />
+        <label for="test2">Sem Licença</label>
+      </p>
+      <p>
+        <input type="checkbox" id="test3"  />
+        <label for="test3">Licença E1</label>
+      </p>
+    </form>
+    
+    <p class="txtcenter">
+      <a class="btn" id="enviarform">Continuar</a>
+    </p>
+    <p class="txtcenter">Lembrando que em caso de alguma duvida<br/>sempre entrar em contato com a gestão antes de finalizar o processo.</p>
+    <div class="lembretee">
+    </div>
+      <script>
+      document.getElementById("enviarform").addEventListener("click", function(){
+        var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        var checkedBoxes = Array.prototype.slice.call(checkboxes).filter(x => x.checked);
+        if (checkedBoxes.length == 0) {
+            alert("Selecione pelo menos uma checkbox!");
+            return;
+        }
+        if (checkedBoxes.length > 1){
+            alert("Selecione apenas uma checkbox!");
+            return;
+        }
+        if (document.getElementById("test1").checked) {
+          window.location.href = 'outlookweb.html';
+        }
+        if (document.getElementById("test2").checked) {
+          window.location.href = 'semlicenca.html';
+        } 
+        if (document.getElementById("test3").checked) {
+          window.location.href = 'licencae1.html';
+        } 
+        //Adicione mais else if para cada checkbox
+      });</script>
+  </body> 

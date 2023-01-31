@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset de senha</title>
+    <link rel="stylesheet" type="text/css" href="senha.css">
+    <link rel="icon" href="stellantos.png">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="logo">
+        <a href="index.html">
+        <img class="cabecalho-imagem" src="stellantis.svg" alt="Logo stellantis">
+    </a>
+    </div>
+        <nav class="cabecalho-menu">
+          <a class="cabecalho-menu-item" href="#">Sobre</a>
+        
+        </nav>
+      </header>
+    <h1>Finalizar chamado Falha Teams</h1>
+    <div class="main-content">
+        <h2>Relatado por: Usuario
+        <br>Usuario Afetado: Usuario
+        <br>Tipo de chamada: Incidente
+        <br>Atendida pelo grupo: L_BRA_XXX_SERV_DESK_N1_EUS
+        <br>Descrição resumida: SD - Falha Teams - Galpão ##
+        <br> Descrição: Informamos que todos os procedimentos necessários foram realizados para solucionar o <br> erro que estamos enfrentando, porém, infelizmente ele ainda persiste, <br> com o intuito de facilitar a verificação do problema, incluímos em anexo prints detalhados dos<br> procedimentos realizados e do erro que está sendo apresentado. Acreditamos que a revisão<br> dessas informações possa ajudar na identificação da solução mais adequada.<br>
+
+      Após a verificação inicial dos procedimentos já realizados, foram adicionados mais alguns passos no processo de solução.<br><br>
+
+        1. Verificamos a conexão de internet, garantindo que a mesma está estável e com boa velocidade.<br><br>
+        
+        2. Realizamos a reinstalação do aplicativo, para descartarmos possíveis problemas com a instalação do software.<br><br>
+        
+        3. Verificamos a atualização do aplicativo, garantindo que está na versão mais recente.<br><br>
+        
+        4. Verificamos as permissões de usuário, garantindo que o usuário tem acesso às funcionalidades necessárias.<br><br>
+        
+        Infelizmente, mesmo após todos esses procedimentos, o erro ainda persiste.<br>
+        
+        Pedimos por gentileza que sejam verificadas as informações anexadas.<br>
+<br>
+Grupo Solucionador:L_BRA_XXX_SERV_DESK_N2_EUS <br>
+
+<mark>Antes de enviar o chamado verificar se todo procedimento foi feito de acordo como consta no chamado!!!</mark>
+
+        </h2>
+      </div>
+
+      <p>
+        <input type="checkbox" id="test1"  />
+        <label for="test1">Chamado finalizado com sucesso.</label>
+      </p>
+    </form>
+    
+    <p class="txtcenter">
+      <a class="btn" id="enviarform">Continuar</a>
+    </p>
+    <p class="txtcenter">Lembrando que em caso de alguma duvida<br/>sempre entrar em contato com a gestão antes de finalizar o processo.</p>
+    <div class="lembretee">
+    </div>
+      <script>
+      document.getElementById("enviarform").addEventListener("click", function(){
+        var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        var checkedBoxes = Array.prototype.slice.call(checkboxes).filter(x => x.checked);
+        if (checkedBoxes.length == 0) {
+            alert("Selecione pelo menos uma checkbox!");
+            return;
+        }
+        if (checkedBoxes.length > 1){
+            alert("Selecione apenas uma checkbox!");
+            return;
+        }
+        if (document.getElementById("test1").checked) {
+          window.location.href = 'senha1.1.html';
+        } 
+        //Adicione mais else if para cada checkbox
+      });</script>
+  </body> 

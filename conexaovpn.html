@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desbloqueio de usuário PSA</title>
+    <link rel="stylesheet" type="text/css" href="senha.css">
+    <link rel="icon" href="stellantos.png">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="logo">
+        <a href="index.html">
+        <img class="cabecalho-imagem" src="stellantis.svg" alt="Logo stellantis">
+    </a>
+    </div>
+        <nav class="cabecalho-menu">
+          <a class="cabecalho-menu-item" href="#">Sobre</a>
+        
+        </nav>
+      </header>
+    <h1>Configuração de VPN</h1>
+    <div class="main-content"> 
+        <h2> 1. UTILIZAÇÃO DE VPN<br>
+           VPN ou Virtual Private Network (Rede Privada Virtual) trata-se de uma rede privada construída sobre a infraestrutura de uma rede pública. <br>O grupo FIAT utiliza o VPN basicamente para acessar a rede da FIAT interna quando o funcionário está externo a mesma. <br>Dessa forma o funcionário consegue acessar a intranet, pastas de rede e e-mail corporativo.  
+           <br><br>2. PULSE SECURE<br>
+           É necessário verificar se o usuário está no grupo que libera a VPN, caso o funcionário possua acesso ao grupo e mesmo assim não consiga conectar-se o VPN, <br>deverá ser feita as análises básicas antes de efetuar a abertura de chamado.
+           <br><br>3. LOGON NO VPN<br>
+           O funcionário deverá  acessar o VPN com as credenciais de rede, lembrando que é imprescindível que seja inserido o domínio e a contra barra, <br>antes de seu usuário.
+           <br>Conforme:
+           
+           fiatauto\FXXXXX  ou
+           gescoeurope\BRFSXXXXXX
+           
+           <br><br>4. VPN SEM CONEXÕES CONFIGURADAS<br>
+Caso não tenha disponível conexão no VPN do colaborador, deve-se proceder da seguinte forma:
+
+<li>Utilize a opção “Add Conection” para adicionar uma nova conexão:</li><br><br>
+<br>Para configurar a conexão: No campo Name, você pode nomear a conexão da forma que quiser. Já no campo Server URL, deve-se utilizar os endereços:
+
+<br>Funcionários: https://vpn-bcp.fcagroup.com.br <br>Terceiros: https://vpn-external-bcp.fcagroup.com.br<br><br>
+5. VPN DESCONECTANDO CONSTANTEMENTE<br>
+Caso esteja tratando uma falha com as seguintes características:<br>
+
+VPN conecta e funciona durante alguns segundos<br>
+VPN conecta e cai imediatamente<br>
+ 
+
+Neste caso, devemos redefinir as configurações do servidor seguindo os passos abaixo:<br>
+
+Abra o VPN e selecione "Delete Connection"<br>
+
+
+ 
+
+ Após a exclusão da conexão, favor seguir o passo 4.<br>
+
+           
+           
+        </li>
+            <br>
+                                    
+
+
+        </li>
+        </h2>
+      </div>
+
+      <p>
+        <input type="checkbox" id="test1"  />
+        <label for="test1">Template para abertura de chamado.</label>
+      </p>
+    </form>
+    
+    <p class="txtcenter">
+      <a class="btn" id="enviarform">Continuar</a>
+    </p>
+    <p class="txtcenter">Lembrando que em caso de alguma duvida<br/>sempre entrar em contato com a gestão antes de finalizar o processo.</p>
+    <div class="lembretee">
+    </div>
+      <script>
+      document.getElementById("enviarform").addEventListener("click", function(){
+        var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        var checkedBoxes = Array.prototype.slice.call(checkboxes).filter(x => x.checked);
+        if (checkedBoxes.length == 0) {
+            alert("Selecione pelo menos uma checkbox!");
+            return;
+        }
+        if (checkedBoxes.length > 1){
+            alert("Selecione apenas uma checkbox!");
+            return;
+        }
+        if (document.getElementById("test1").checked) {
+          window.location.href = 'templateconfig.html';
+        } 
+        //Adicione mais else if para cada checkbox
+      });</script>
+  </body> 
+  

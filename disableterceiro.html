@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset de senha</title>
+    <link rel="stylesheet" type="text/css" href="senha.css">
+    <link rel="icon" href="stellantos.png">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="logo">
+        <a href="index.html">
+        <img class="cabecalho-imagem" src="stellantis.svg" alt="Logo stellantis">
+    </a>
+    </div>
+        <nav class="cabecalho-menu">
+          <a class="cabecalho-menu-item" href="#">Sobre</a>
+        
+        </nav>
+      </header>
+    <h1>Abertura de chamado para "User Disable" Terceiro</h1>
+    <div class="main-content">
+        <h2>Relatado por: Usuario
+        <br>Usuario Afetado: Usuario
+        <br>Tipo de chamada: Requisição
+        <br>Item de Solicitação: Gerenciar Colaboradores e contas de serviços
+        <br>Atendida pelo grupo: L_BRA_XXX_SERV_DESK_N1_EUS
+        <br>Descrição resumida: SD - Reativação de Usuário Terceiro
+        <br>Descrição do chamado: Usuário em contato solicita a reativação de seu usuário de rede. <br>
+        LOGA EM QUAL DOMÍNIO? (Ex.: Fiatauto, Comaugroup...): Fiatauto
+       <br> USUÁRIO A SER REATIVADO: (ID de Usuario) 123456
+       <br> NOME COMPLETO DO BENEFICIADO: João Silva
+       <br> E-MAIL: joao.silva@email.com
+       <br> EMPRESA: Fiat Automóveis
+       <br> CELULAR PRA CONTATO: (11) 99999-9999
+       <br> TELEFONE DO LÍDER: (11) 88888-8888 <br><br>
+       Na seleção da Ação selecione <mark> Atualizar Usuário.</mark> 
+Copie a Descrição resumida (call short description) para o campo Descreva o que precisa ser atualizado <br> e também na Descrição (call description) para o campo Justificativa da solicitação. <br> 
+Clique em Adicionar ao Carrinho e em seguida em Finalizar Compra.<br>
+ Você pode verificar o número da REQ conforme destacado em amarelo: 
+
+Número de Solicitação: <mark>REQ4005686</mark>
+        </h2>
+      </div>
+
+      <p>
+        <input type="checkbox" id="test1"  />
+        <label for="test1">Foi confirmado todos os dados.</label>
+      </p>
+    </form>
+    
+    <p class="txtcenter">
+      <a class="btn" id="enviarform">Continuar</a>
+    </p>
+    <p class="txtcenter">Lembrando que em caso de alguma duvida<br/>sempre entrar em contato com a gestão antes de finalizar o processo.</p>
+    <div class="lembretee">
+    <p><strong>Lembrando de fechar a task em N1, em menos de 10min. </strong> </p>
+    </div>
+      <script>
+      document.getElementById("enviarform").addEventListener("click", function(){
+        var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        var checkedBoxes = Array.prototype.slice.call(checkboxes).filter(x => x.checked);
+        if (checkedBoxes.length == 0) {
+            alert("Selecione pelo menos uma checkbox!");
+            return;
+        }
+        if (checkedBoxes.length > 1){
+            alert("Selecione apenas uma checkbox!");
+            return;
+        }
+        if (document.getElementById("test1").checked) {
+          window.location.href = 'senha1.1.html';
+        } 
+        //Adicione mais else if para cada checkbox
+      });</script>
+  </body> 
+  

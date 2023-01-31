@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desbloqueio de usuário PSA</title>
+    <link rel="stylesheet" type="text/css" href="senha.css">
+    <link rel="icon" href="stellantos.png">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="logo">
+        <a href="index.html">
+        <img class="cabecalho-imagem" src="stellantis.svg" alt="Logo stellantis">
+    </a>
+    </div>
+        <nav class="cabecalho-menu">
+          <a class="cabecalho-menu-item" href="#">Sobre</a>
+        
+        </nav>
+      </header>
+    <h1>Recriação de Perfil de E-mail</h1>
+    <div class="main-content">
+        <p>Antes de executar o procedimento, verifique se o usuário possui PST ou outra caixa de e-mail adicionada e anote-as, <br>pois elas precisarão ser inseridas novamente na recriação.</p>
+        <h2>Procedimento:</h2>
+          <li>Acessar o Painel de Controle</li><br>
+          <li>Clicar em Contas de Usuário</li><br>
+          <li>Clicar na opção Mail</li><br>
+          <li>Clicar na opção Mostrar perfis...</li><br>
+          <li>Clicar em Adicionar</li><br>
+          <li>Nomear o perfil e clicar em OK</li><br>
+          <li>Na tela de configuração de e-mail, inserir o e-mail do usuário e concluir a configuração</li><br>
+          <li>Ao concluir, selecionar o perfil recém-criado, clicar em Aplicar e clicar em OK</li><br>
+          <li>Reiniciar o Outlook e adicionar as PSTs e/ou caixas compartilhadas</li>
+        <p>Obs. 1: Nunca exclua o antigo perfil para poder recuperar as informações, caso necessário.</p>
+        <p>Obs. 2: As regras de e-mail não são migradas se tiverem sido criadas localmente. <br>O usuário deverá configurá-las novamente. <br>Se forem criadas no servidor (Versão Web), serão importadas automaticamente.</p>
+      </div>
+
+      <p>
+        <input type="checkbox" id="test1"  />
+        <label for="test1">Verificar template para abertura de chamado.</label>
+      </p>
+    </form>
+    
+    <p class="txtcenter">
+      <a class="btn" id="enviarform">Continuar</a>
+    </p>
+    <p class="txtcenter">Lembrando que em caso de alguma duvida<br/>sempre entrar em contato com a gestão antes de finalizar o processo.</p>
+    <div class="lembretee">
+    </div>
+      <script>
+      document.getElementById("enviarform").addEventListener("click", function(){
+        var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        var checkedBoxes = Array.prototype.slice.call(checkboxes).filter(x => x.checked);
+        if (checkedBoxes.length == 0) {
+            alert("Selecione pelo menos uma checkbox!");
+            return;
+        }
+        if (checkedBoxes.length > 1){
+            alert("Selecione apenas uma checkbox!");
+            return;
+        }
+        if (document.getElementById("test1").checked) {
+          window.location.href = 'templaterecriarperfil.html';
+        } 
+        //Adicione mais else if para cada checkbox
+      });</script>
+  </body> 
+  

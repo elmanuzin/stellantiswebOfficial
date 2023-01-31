@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Encode+Sans+Condensed:wght@500&family=Lilita+One&family=Nunito+Sans&family=Open+Sans&family=Rubik+Bubbles&display=swap');
+/* Estilizando o título principal */
+.titulo-principal {
+    text-align-last: left;
+    font-size: 1em;
+    color: rgb(0, 0, 0) ;
+    background-color: rgb(255, 255, 255);
+    font-family: 'Encode Sans Condensed', sans-serif;
+    ;
+    
+}
+
+/* Estilizando o menu de navegação */
+nav {
+    background-color: #0099cc;
+    ;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+nav li {
+    display: table-row;
+    text-align: center;
+    line-height: 2.5;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    font-size: 2em;
+    font-family: 'Lilita One', cursive;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+nav a:hover {
+    color: #0099cc;
+}
+
+/* Estilizando o rodapé */
+.rodape {
+    text-align: center;
+    background-color: #0099cc;
+    padding: 10px;
+}

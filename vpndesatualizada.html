@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desbloqueio de usuário PSA</title>
+    <link rel="stylesheet" type="text/css" href="senha.css">
+    <link rel="icon" href="stellantos.png">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="logo">
+        <a href="index.html">
+        <img class="cabecalho-imagem" src="stellantis.svg" alt="Logo stellantis">
+    </a>
+    </div>
+        <nav class="cabecalho-menu">
+          <a class="cabecalho-menu-item" href="#">Sobre</a>
+        
+        </nav>
+      </header>
+    <h1>Atualizção de VPN</h1>
+    <div class="main-content"> 
+        <h2><conexão com a VPN. <br><br>
+            DESCRIÇÃO: <br><br>
+            Este procedimento instruir analistas do SD referente à <br>atualização versão do aplicativo Pulse Secure utilizado para conexão com a VPN de acordo com a máquina do usuário.  <br><br>
+            PROCEDIMENTO: <br><br>
+Buscando a versão atualizada do Pulse: Para máquinas Stellantis <br>
+  1. Buscar na busca do Windows por “Software Center”. <br>
+   2. Abrir o Software Center.  <br>
+     3. Na busca do Software Center buscar por “Pulse”.<br>
+     4. Verificar se foi encontrado o aplicativo do Pulse Secure. <br>
+     5. Clicar sobre o aplicativo do Pulse Secure.<br> 
+      6. Clicar sobre atualizar, se existir a opção. <br>O usuário deve aguardar até que o programa seja atualizado e tentar conectar-se novamente. <br><br>
+      7. O usuário deve acessar o portal UserAccount (https://useraccount.fcagroup.com) para baixar o instalador da versão correta. <br>
+       8. Na parte superior, clicar em ir em Resources e em seguida em Utility Kit 
+    9. Fazer o download para o Sistema Operacional mais adequado clicando no ícone com a seta para baixo. <br>
+      10. O usuário deve aguardar que o download seja concluído para iniciar a instalação executando o instalador baixado. <br><br>
+   <mark> Caso a instalação peça senha de Administrador de máquina terceira, orientar a procurar a TI parceira.</mark> <br>
+      </div>
+
+      <p>
+        <input type="checkbox" id="test1"  />
+        <label for="test1">Template abertura de chamado.</label>
+      </p>
+    </form>
+    
+    <p class="txtcenter">
+      <a class="btn" id="enviarform">Continuar</a>
+    </p>
+    <p class="txtcenter">Lembrando que em caso de alguma duvida<br/>sempre entrar em contato com a gestão antes de finalizar o processo.</p>
+    <div class="lembretee">
+    </div>
+      <script>
+      document.getElementById("enviarform").addEventListener("click", function(){
+        var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        var checkedBoxes = Array.prototype.slice.call(checkboxes).filter(x => x.checked);
+        if (checkedBoxes.length == 0) {
+            alert("Selecione pelo menos uma checkbox!");
+            return;
+        }
+        if (checkedBoxes.length > 1){
+            alert("Selecione apenas uma checkbox!");
+            return;
+        }
+        if (document.getElementById("test1").checked) {
+          window.location.href = 'templateavalicaovpn.html';
+        } 
+        //Adicione mais else if para cada checkbox
+      });</script>
+  </body> 
+  

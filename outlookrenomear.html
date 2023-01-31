@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Disable</title>
+    <link rel="stylesheet" type="text/css" href="senha.css">
+    <link rel="icon" href="stellantos.png">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="logo">
+        <a href="index.html">
+        <img class="cabecalho-imagem" src="stellantis.svg" alt="Logo stellantis">
+    </a>
+    </div>
+        <nav class="cabecalho-menu">
+          <a class="cabecalho-menu-item" href="#">Sobre</a>
+        
+        </nav>
+      </header>
+    <h1>Procedimento para renomear pasta Outlook</h1>
+    <div class="main-content">
+        <h2>Siga o passo a passo abaixo para renomear pasta Outlook:<br>
+        <br>1. Abra o outlook e vá na aba de Início <br>
+        Nela, vá em Configurações de Conta e Configurações de Conta novamente  <br>
+        <br>2. Localize a aba de Arquivos de Dados, Selecione o arquivo que tenha o final “.ost” e clique em Abrir Local do Arquivo  <br>
+        Nesta pasta, retorne um diretório clicando no nome “Micrososft” na aba de endereço e feche o Outlook  <br>
+        <br>3. Localize a pasta “Outloook”, clique com o botão direito do mouse e vá em “Renomar”  <br>
+        Mantenha o nome existente e apenas adiciona um “.old” ao final <br>
+        <br>4.Abra novamente o Outlook.<br>
+        <br>Este procedimento forçará o Outlook a reafazer o download de todos os emails do perfil selecionado, fazendo assim com que haja a sincronização.<br><br><br>
+        <br>Caso funcionar, marcar Checkbox para finalizar com chamado.<br>
+        <br>Caso não funcionar, marcar Checkbox para prosseguir com chamado
+        </h2>
+      </div>
+
+      <p>
+        <input type="checkbox" id="test1"  />
+        <label for="test1">Finalizar chamado</label>
+      </p>
+      <p>
+      <input type="checkbox" id="test2"  />
+        <label for="test2">Prosseguir Chamado</label>
+      </p>
+    </form>
+    
+    <p class="txtcenter">
+      <a class="btn" id="enviarform">Continuar</a>
+    </p>
+    <p class="txtcenter">Lembrando que em caso de alguma duvida<br/>sempre entrar em contato com a gestão antes de finalizar o processo.</p>
+    <div class="lembretee">
+    </div>
+      <script>
+      document.getElementById("enviarform").addEventListener("click", function(){
+        var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        var checkedBoxes = Array.prototype.slice.call(checkboxes).filter(x => x.checked);
+        if (checkedBoxes.length == 0) {
+            alert("Selecione pelo menos uma checkbox!");
+            return;
+        }
+        if (checkedBoxes.length > 1){
+            alert("Selecione apenas uma checkbox!");
+            return;
+        }
+        if (document.getElementById("test1").checked) {
+          window.location.href = 'renomearfinal.html';
+        } 
+        if (document.getElementById("test2").checked) {
+          window.location.href = 'outlookweb.html';
+        }
+        //Adicione mais else if para cada checkbox
+      });</script>
+  </body> 
+  

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset de senha</title>
+    <link rel="stylesheet" type="text/css" href="senha.css">
+    <link rel="icon" href="stellantos.png">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="logo">
+        <a href="index.html">
+        <img class="cabecalho-imagem" src="stellantis.svg" alt="Logo stellantis">
+    </a>
+    </div>
+        <nav class="cabecalho-menu">
+          <a class="cabecalho-menu-item" href="#">Sobre</a>
+        
+        </nav>
+      </header>
+    <h1>Mapear impressora Zebra</h1>
+    <div class="main-content">
+        <h2>1. Identificando a marca da impressora</h2>
+    O Grupo Fiat trabalha com impressoras de diversas marcas, como Xerox, Idea, Ricoh, Brother, HP e Zebra. Para identificar se a impressora é da Xerox, <br>verifique se há a logo da empresa na impressora ou na etiqueta, <br>onde deve estar escrito ******QMON*** (para impressoras pretas e brancas) ou ******QCOR*** (para impressoras coloridas).</p>
+    <h2>2. Conexão Remota</h2>
+    Para conectar remotamente ao micro do usuário, utilize a aplicação RC (SCCM), localizada em: \\172.18.99.6\Files\Public\SCCM2012\RC. <br>Clicar em "File" e "Connect". Insira a etiqueta "fiatgroup" no campo "Address", seguido do complemento do domínio da máquina para melhores resultados.</p>
+    <h2>3. Mapeando a Impressora</h2>
+    As impressoras Xerox podem ser encontradas nos servidores: \\172.18.246.7 e \\172.18.246.8. Acesse um dos servidores, encontre a impressora na listagem e clique duas vezes nela.<br> Os drivers serão baixados e atualizados automaticamente. Se o usuário quiser, é possível definir a impressora como padrão, <br>acessando "Dispositivos e Impressoras" no menu iniciar, clicando com o botão direito na impressora mapeada e selecionando "Definir como padrão". <br>Lembre-se de fazer uma impressão de teste para evitar problemas futuros.</p><br>
+<h2>Para abertura do chamado seguir informações a baixo:<br><br>
+    Criar um “Novo Incidente”<br>
+Preenchimento do Script Completo<br>
+Preencher a “Aplicação ou Serviço afetado”<br>
+“Item de configuração”<br>
+“Grupo Solucionador” deve ser inserido a fila na qual você pertence<br>
+No campo “Atribuído a” procure seu nome<br>
+Altere o “Estado” para “Fechado”;<br>
+Na aba “Informações de resolução e fechamento”, utilizar o “Código de fechamento” que <br>mais se adapta ao serviço executado.<br>
+Descrever na “Nota de Confirmação do Fechamento” o que foi feito para resolução do <br>problema utilizando o script abaixo<br>
+CAUSA RAIZ<br>
+SOLUÇÃO<br>
+Testes OK<br>
+Salvar o chamado<br>
+
+
+</h2>
+   </div>
+      <p>
+        <input type="checkbox" id="test1"  />
+        <label for="test1">Chamado finalizado com sucesso.</label>
+      </p>
+    </form>
+    
+    <p class="txtcenter">
+      <a class="btn" id="enviarform">Continuar</a>
+    </p>
+    <p class="txtcenter">Lembrando que em caso de alguma duvida<br/>sempre entrar em contato com a gestão antes de finalizar o processo.</p>
+    <div class="lembretee">
+    </div>
+      <script>
+      document.getElementById("enviarform").addEventListener("click", function(){
+        var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        var checkedBoxes = Array.prototype.slice.call(checkboxes).filter(x => x.checked);
+        if (checkedBoxes.length == 0) {
+            alert("Selecione pelo menos uma checkbox!");
+            return;
+        }
+        if (checkedBoxes.length > 1){
+            alert("Selecione apenas uma checkbox!");
+            return;
+        }
+        if (document.getElementById("test1").checked) {
+          window.location.href = 'senha1.1.html';
+        } 
+        //Adicione mais else if para cada checkbox
+      });</script>
+  </body> 

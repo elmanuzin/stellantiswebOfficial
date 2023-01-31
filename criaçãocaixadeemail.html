@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desbloqueio de usuário PSA</title>
+    <link rel="stylesheet" type="text/css" href="senha.css">
+    <link rel="icon" href="stellantos.png">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="logo">
+        <a href="index.html">
+        <img class="cabecalho-imagem" src="stellantis.svg" alt="Logo stellantis">
+    </a>
+    </div>
+        <nav class="cabecalho-menu">
+          <a class="cabecalho-menu-item" href="#">Sobre</a>
+        
+        </nav>
+      </header>
+    <h1>Solicitação de Criação de Emaill</h1>
+    <div class="main-content">
+        <p>Formulario para abertura de chamado <a href="https://fiatchrysler.service-now.com/driveit/?id=sc_cat_item&sys_id=92e61a3a6fbdf500ae07b03f5d3ee4d0&sysparm_category=9af2c8711b85c09c16340dc6cc4bcb1d">Aqui</a></p>
+        <h2>Procedimento para Solicitação de Criação de Email:<br>
+            Siga os passos abaixo para realizar a solicitação:<br><br>
+        <li>Acesse o DriveIT e clique em "Solicitar um Serviço"</li><br>
+        <li>Na seção de "Email", clique em "Serviços de E-mail"</li><br>
+        <li>No formulário, escolha a opção "Criar" e "Conta individual"</li><br>
+        <li>Na sugestão do email, use o formato nome.sobrenome@stellantis.com (por exemplo, joao.silva@stellantis.com) e na "Sugestão de Nome de Exibição", utilize o nome completo</li><br>
+        <li>Na justificativa, inclua o que o usuário precisa para o exercício do seu trabalho e, se necessário, adicione print da tela de erro e do Crosscheck</li><br>
+        <br><br> Lembrando de aguardar a conclução do chamado para verificar se ainda ocorre algúm erro.
+    </h2>
+    </body>
+  </html>
+      </div>
+
+      <p>
+        <input type="checkbox" id="test1"  />
+        <label for="test1">Realizado com sucesso.</label>
+      </p>
+    </form>
+    
+    <p class="txtcenter">
+      <a class="btn" id="enviarform">Continuar</a>
+    </p>
+    <p class="txtcenter">Lembrando que em caso de alguma duvida<br/>sempre entrar em contato com a gestão antes de finalizar o processo.</p>
+    <div class="lembretee">
+    </div>
+      <script>
+      document.getElementById("enviarform").addEventListener("click", function(){
+        var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        var checkedBoxes = Array.prototype.slice.call(checkboxes).filter(x => x.checked);
+        if (checkedBoxes.length == 0) {
+            alert("Selecione pelo menos uma checkbox!");
+            return;
+        }
+        if (checkedBoxes.length > 1){
+            alert("Selecione apenas uma checkbox!");
+            return;
+        }
+        if (document.getElementById("test1").checked) {
+          window.location.href = 'senha1.1.html';
+        } 
+        //Adicione mais else if para cada checkbox
+      });</script>
+  </body> 
+  

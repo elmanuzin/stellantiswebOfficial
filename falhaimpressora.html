@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Disable</title>
+    <link rel="stylesheet" type="text/css" href="senha.css">
+    <link rel="icon" href="stellantos.png">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="logo">
+        <a href="index.html">
+        <img class="cabecalho-imagem" src="stellantis.svg" alt="Logo stellantis">
+    </a>
+    </div>
+        <nav class="cabecalho-menu">
+          <a class="cabecalho-menu-item" href="#">Sobre</a>
+        
+        </nav>
+      </header>
+    <h1>Falha impressora</h1>
+    <div class="main-content">
+        <h2>Marque a checkbox de acordo com o tipo da impressora,segue a baixo os tipos de impressora:<br><br>
+            
+           <strong>XEROX:</strong>As impressoras da marca Xerox, possuem etiquetas do tipo ABRBE1QMON;<br> ABRBE1QCOR; SBRBE1QMON; SBRBE1QCOR; PBRBE1QMON;PBRBE1QCOR, podendo<br> haver outras dependendo da empresa, este chamado é aberto através do Service Now.<br> O atendimento é realizado equipe da Xerox.<br><br>
+
+           <strong>BROTHER:</strong> As impressoras Brother são utilizadas pela Teksid, possuem etiquetas do tipo<br> ABRBE2MT, os chamados são abertos pelo Service Now. O atendimento é realizado pela equipe da Heliotec.<br><br>
+
+<strong>LEXMARK E ZEBRA PRODUÇÃO:</strong> mpressoras de produção, os chamados são abertos pelo <br>Service Now. O atendimento das impressoras de produção é realizado pela Campello.<br><br>
+
+<strong>RICCOH:</strong> Estas impressoras são utilizadas pela Comau, portanto seu chamado deverá ser <br>aberto pelo Service Now, possuem etiquetas iniciadas por URB. <br>O atendimento é realizado pela equipe da Office Print.<br><br>
+
+<strong>LEXMARK ESCRITÓRIO:</strong> Impressoras de escritório, os chamados são abertos pelo Service Now. <br>O atendimento das impressoras de escritório é realizado pela Lowcost.<br><br>
+
+<strong>OUTRAS IMPRESSORAS – REGIONAIS:</strong>  Impressoras de outras marcas como Epson, por <br>exemplo, e impressoras de Regionais, o atendimento é feito pelo Fleet, chamado aberto<br> pelo Service Now e encaminhado para a fila referente à localização do equipamento.<br><br>
+        <br>Marque checkbox de acordo com sua solicitação:<br>
+        </h2>
+      </div>
+
+      <p>
+        <input type="checkbox" id="test1"  />
+        <label for="test1">Xerox</label>
+      </p>
+      <p>
+      <input type="checkbox" id="test2"  />
+        <label for="test2">Brother</label>
+      </p>
+      <p>
+        <input type="checkbox" id="test3"  />
+          <label for="test3">Lexmark e Zebra produção</label>
+        </p>
+        <p>
+            <input type="checkbox" id="test4"  />
+              <label for="test4">Riccoh</label>
+            </p>
+            <p>
+                <input type="checkbox" id="test5"  />
+                  <label for="test5">Lexmark Escritório</label>
+                </p>
+                <p>
+                    <input type="checkbox" id="test6"  />
+                      <label for="test6">Outras Impressoras - regionais</label>
+                    </p>
+    </form>
+    
+    <p class="txtcenter">
+      <a class="btn" id="enviarform">Continuar</a>
+    </p>
+    <p class="txtcenter">Lembrando que em caso de alguma duvida<br/>sempre entrar em contato com a gestão antes de finalizar o processo.</p>
+    <div class="lembretee">
+    </div>
+      <script>
+      document.getElementById("enviarform").addEventListener("click", function(){
+        var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        var checkedBoxes = Array.prototype.slice.call(checkboxes).filter(x => x.checked);
+        if (checkedBoxes.length == 0) {
+            alert("Selecione pelo menos uma checkbox!");
+            return;
+        }
+        if (checkedBoxes.length > 1){
+            alert("Selecione apenas uma checkbox!");
+            return;
+        }
+        if (document.getElementById("test1").checked) {
+          window.location.href = 'falhaxerox.html';
+        } 
+        if (document.getElementById("test2").checked) {
+          window.location.href = 'falhabrother.html';
+        } 
+        if (document.getElementById("test3").checked) {
+          window.location.href = 'falhalexze.html';
+        } 
+        if (document.getElementById("test4").checked) {
+          window.location.href = 'falhariccoh.html';
+        } 
+        if (document.getElementById("test5").checked) {
+          window.location.href = 'falhalexze.html';
+        } 
+        if (document.getElementById("test6").checked) {
+          window.location.href = 'falhaoutramarcas.html';
+        } 
+        //Adicione mais else if para cada checkbox
+      });</script>
+  </body>

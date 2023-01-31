@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset de senha</title>
+    <link rel="stylesheet" type="text/css" href="senha.css">
+    <link rel="icon" href="stellantos.png">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="logo">
+        <a href="index.html">
+        <img class="cabecalho-imagem" src="stellantis.svg" alt="Logo stellantis">
+    </a>
+    </div>
+        <nav class="cabecalho-menu">
+          <a class="cabecalho-menu-item" href="#">Sobre</a>
+        
+        </nav>
+      </header>
+    <h1>Abertura de chamado para "User Disable" Terceiro</h1>
+    <div class="main-content">
+        <h2>Relatado por: Usuario
+        <br>Usuario Afetado: Usuario
+        <br>Tipo de chamada: Incidente
+        <br>Atendida pelo grupo: L_BRA_XXX_SERV_DESK_N1_EUS
+        <br>Descrição resumida: SD - Catraca com Giro Livre - Galpão x
+        <br>Descrição do chamado: Um colaborador entrou em contato para informar sobre uma falha na catraca localizada no Galpão X . <br>Segundo o relato, a catraca está com giro livre. Solicitamos uma verificação imediata. <br>
+       <br> SETOR:
+       <br> NÚMERO DO GALPÃO E SALA:
+       <br> TELEFONE:
+       <br> CELULAR: 
+       <br> ETIQUETA FIAT GROUP:
+       <br> MELHOR HORÁRIO DE ATENDIMENTO:
+       <br>MELHOR CANAL DE COMUNICAÇÃO: <br><br>
+       Aplicação ou serviço impactado: Facility Hardware <br>
+       Item de configuração: "ETIQUETA FIAT GROUP"
+        </h2>
+      </div>
+
+      <p>
+        <input type="checkbox" id="test1"  />
+        <label for="test1">Abertura de chamado realizado.</label>
+      </p>
+    </form>
+    
+    <p class="txtcenter">
+      <a class="btn" id="enviarform">Continuar</a>
+    </p>
+    <p class="txtcenter">Lembrando que em caso de alguma duvida<br/>sempre entrar em contato com a gestão antes de finalizar o processo.</p>
+    <div class="lembretee">
+    </div>
+      <script>
+      document.getElementById("enviarform").addEventListener("click", function(){
+        var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        var checkedBoxes = Array.prototype.slice.call(checkboxes).filter(x => x.checked);
+        if (checkedBoxes.length == 0) {
+            alert("Selecione pelo menos uma checkbox!");
+            return;
+        }
+        if (checkedBoxes.length > 1){
+            alert("Selecione apenas uma checkbox!");
+            return;
+        }
+        if (document.getElementById("test1").checked) {
+          window.location.href = 'senha1.1.html';
+        } 
+        //Adicione mais else if para cada checkbox
+      });</script>
+  </body> 

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset de senha</title>
+    <link rel="stylesheet" type="text/css" href="senha.css">
+    <link rel="icon" href="stellantos.png">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="logo">
+        <a href="index.html">
+        <img class="cabecalho-imagem" src="stellantis.svg" alt="Logo stellantis">
+    </a>
+    </div>
+        <nav class="cabecalho-menu">
+          <a class="cabecalho-menu-item" href="#">Sobre</a>
+        
+        </nav>
+      </header>
+    <h1>Template recriação de Perfil de E-mail</h1>
+    <div class="main-content">
+        <h2>Relatado por: Usuario
+        <br>Usuario Afetado: Usuario
+        <br>Tipo de chamada: Incidente
+        <br>Atendida pelo grupo: L_BRA_XXX_SERV_DESK_N1_EUS
+        <br>Descrição resumida: SD - Recriação de Perfil de E-mail - Galpão ##
+        <br>Descrição: DESCRIÇÃO: O usuário entrou em contato informando que não estava recebendo e-mails na sua caixa de entrada.<br> Após realizarmos uma verificação inicial, foi constatado que a pasta de entrada do usuário estava corrompida<br> para evitar que fossem perdidos os e-mails já presentes nela, foi decidido renomeá-la adicionando .old ao nome original, <br>porém não obtive exito com o procedimento, então foi feito o processo de recriação de perfil no outlook<br><br>
+        Foi realizado os seguintes passos:<br>
+
+        <br><br>Para recriar o perfil de email no Microsoft Outlook, eu primeiro fechei o aplicativo. <br>Em seguida, abri o Painel de Controle no Windows e selecionei "Mail (Microsoft <br> Outlook 2016)" na lista de opções de Conta de Email. Cliquei no botão "Adicionar" na<br> guia "E-mail" e segui as instruções na tela para configurar minha conta de email.<br><br>
+
+        Depois de configurar a conta, iniciei o Outlook e selecionei a conta recém-criada. <br>Em seguida, cliquei em "Configurações Avançadas" e verifiquei as configurações de <br> servidor de entrada e saída de email para garantir que estivessem corretas. <br>Depois de verificar as configurações, cliquei em "OK" para salvar as configurações.<br><br>
+        
+        Por fim, testei enviando e recebendo uma mensagem de email para verificar se tudo estava <br>funcionando corretamente. Após esses passos, conta de email do usuário estava configurada<br> e funcionando normalmente no Microsoft Outlook.<br>
+
+<br><br>Abrir chamdo e fechar em nossa fila, se resolvido.<br> Caso não resolva encaminhar para N2 com prints do Erro.<br> <a href="outlookn2.html">Chamado para N2</a><br>
+
+        </h2>
+      </div>
+
+      <p>
+        <input type="checkbox" id="test1"  />
+        <label for="test1">Procedimento concluido com sucesso</label>
+      </p>
+    </form>
+    
+    <p class="txtcenter">
+      <a class="btn" id="enviarform">Continuar</a>
+    </p>
+    <p class="txtcenter">Lembrando que em caso de alguma duvida<br/>sempre entrar em contato com a gestão antes de finalizar o processo.</p>
+    <div class="lembretee">
+    </div>
+      <script>
+      document.getElementById("enviarform").addEventListener("click", function(){
+        var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        var checkedBoxes = Array.prototype.slice.call(checkboxes).filter(x => x.checked);
+        if (checkedBoxes.length == 0) {
+            alert("Selecione pelo menos uma checkbox!");
+            return;
+        }
+        if (checkedBoxes.length > 1){
+            alert("Selecione apenas uma checkbox!");
+            return;
+        }
+        if (document.getElementById("test1").checked) {
+          window.location.href = 'senha1.1.html';
+        } 
+        //Adicione mais else if para cada checkbox
+      });</script>
+  </body> 
